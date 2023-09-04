@@ -2,10 +2,11 @@
 #include <stdlib.h>
 
 /**
-* factorize- finds the factor of and prints them
+* factorize - finds the factor of and prints them
 * @n - number to factorize 
 *
 * Return: Pairs of factors of n
+*/
 void factorize(unsigned long int n)
 {
 	long unsigned int i;
@@ -18,7 +19,12 @@ void factorize(unsigned long int n)
 		}
 	}
 }
-
+/**
+* main - start of the program 
+* @argv- array that contains command line argument 
+* @argc - no of command line argument 
+* Return: 0 on Success
+*/
 int main(int argc, char *argv[])
 {
 	if (argc != 2)

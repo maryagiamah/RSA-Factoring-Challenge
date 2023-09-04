@@ -7,14 +7,14 @@
 *
 * Return: Pairs of factors of n
 */
-void factorize(unsigned long int n)
+void factorize(unsigned long long int n)
 {
-	 unsigned long int i;
+	 unsigned long long int i;
 	for (i = 2; i <= n; i++)
 	{
 		while (n % i == 0)
 		{
-			printf("%lu=%lu*%lu\n", n, n / i, i);
+			printf("%llu=%llu*%llu\n", n, n / i, i);
 			return;
 		}
 	}
@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
     char buffer[256];
     while (fgets(buffer, sizeof(buffer), file)) 
     {
-        unsigned long int num = atoi(buffer);
+        unsigned long long int num = atoi(buffer);
         factorize(num);
     }
 

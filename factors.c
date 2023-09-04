@@ -9,8 +9,8 @@
 */
 void factorize(unsigned long int n)
 {
-	long unsigned int i;
-	for (i = 2; i * i <= n; i++)
+	 unsigned long int i;
+	for (i = 2; i <= n; i++)
 	{
 		while (n % i == 0)
 		{

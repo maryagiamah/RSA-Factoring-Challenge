@@ -1,14 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+* factorize- finds the factor of and prints them
+* @n - number to factorize 
+*
+* Return: Pairs of factors of n
 void factorize(unsigned long int n)
 {
 	long unsigned int i;
-	for (i = 2; i <= n; i++)
+	for (i = 2; i * i <= n; i++)
 	{
 		while (n % i == 0)
 		{
-			printf("%lu=%lu*%lu\n", n, i, n / i);
+			printf("%lu=%lu*%lu\n", n, n / i, n);
 			return;
 		}
 	}

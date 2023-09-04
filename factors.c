@@ -14,7 +14,7 @@ void factorize(unsigned long int n)
 	{
 		while (n % i == 0)
 		{
-			printf("%lu=%lu*%lu\n", n, n / i, n);
+			printf("%lu=%lu*%lu\n", n, n / i, i);
 			return;
 		}
 	}

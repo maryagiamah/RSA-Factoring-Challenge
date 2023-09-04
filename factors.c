@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
 
     char buffer[256];
     while (fgets(buffer, sizeof(buffer), file)) {
-        int num = atoi(buffer);
+        unsigned long int num = atoi(buffer);
         factorize(num);
     }
 

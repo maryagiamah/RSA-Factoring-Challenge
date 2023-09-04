@@ -1,6 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+typedef unsigned long long int ullong;
+
+ullong my_atoi(const char *str) {
+    ullong result = 0;
+    int sign = 1; // Default positive sign
+
+    if (*str == '-') {
+        sign = -1;
+        str++;
+    }
+
+    while (*str >= '0' && *str <= '9') {
+        result = result * 10 + (*str - '0');
+        str++;
+    }
+
+    return result * sign;
+}
+
 /**
 * factorize - finds the factor of and prints them
 * @n - number to factorize 
@@ -43,7 +62,7 @@ int main(int argc, char *argv[])
     char buffer[256];
     while (fgets(buffer, sizeof(buffer), file)) 
     {
-        unsigned long long int num = atoi(buffer);
+        unsigned long long int num = my_atoi(buffer);
         factorize(num);
     }
 
